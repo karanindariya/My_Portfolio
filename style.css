@@ -1,0 +1,310 @@
+
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #050505;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, .35);
+    backdrop-filter: blur(15px);
+    z-index: 999;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+#home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 8%;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 30px;
+}
+
+.hero-text h2 {
+    font-size: 60px;
+    color: #FFD700;
+}
+
+.hero-text h3 {
+    margin: 15px 0;
+    font-size: 26px;
+}
+
+.hero-text p {
+    color: #cfcfcf;
+    line-height: 30px;
+}
+
+.hero-image img {
+    width: 360px;
+    border-radius: 50%;
+    border: 6px solid #FFD700;
+    box-shadow: 0 0 40px rgba(255, 215, 0, .4);
+}
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: #FFD700;
+    color: #000;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .4s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px gold;
+}
+
+/* ===========================
+   Sections
+=========================== */
+
+section {
+    padding: 100px 8%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #FFD700;
+    margin-bottom: 50px;
+}
+
+.skill-box,
+.project-card {
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px;
+    transition: .4s;
+}
+
+.skill-box:hover,
+.project-card:hover {
+    transform: translateY(-10px);
+    border: 1px solid #FFD700;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #000;
+    color: #bbb;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px) {
+
+    #home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 42px;
+    }
+
+    .hero-image img {
+        width: 280px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 8px;
+        display: inline-block;
+    }
+
+}
+
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.project-card{
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    backdrop-filter:blur(15px);
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 25px rgba(255,215,0,.4);
+}
+
+.project-image img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-tech span{
+    display:inline-block;
+    padding:8px 15px;
+    margin:6px;
+    border-radius:30px;
+    background:#FFD700;
+    color:#000;
+    font-size:14px;
+    font-weight:600;
+}
+
+.btn-outline{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    border:2px solid #FFD700;
+    color:#FFD700;
+    border-radius:40px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-outline:hover{
+    background:#FFD700;
+    color:#000;
+}
+
+
+.youtube-container,
+.certificate-container,
+.counter-container{
+
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:50px;
+
+}
+
+.youtube-card,
+.certificate-card,
+.counter-box{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:20px;
+text-align:center;
+width:320px;
+transition:.4s;
+
+}
+
+.youtube-card:hover,
+.certificate-card:hover,
+.counter-box:hover{
+
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(255,215,0,.5);
+
+}
+
+.youtube-card i,
+.certificate-card i{
+
+font-size:55px;
+color:#FFD700;
+margin-bottom:20px;
+
+}
+
+.counter-box h2{
+
+font-size:45px;
+color:#FFD700;
+
+}
+
+.counter-box p{
+
+margin-top:10px;
+
+}
+
+
